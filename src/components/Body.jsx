@@ -4,6 +4,7 @@ import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import Footer from "./Footer"
+// import LoginForm from "./LoginForm";
 
 const Body = () => {
     const [listOfRestaurant, setListOfRestaurant] = useState([]);
@@ -66,14 +67,14 @@ const Body = () => {
                 </button>
             </div>
 
-            <div className="res-container mx-30">
+            <div className="res-container mx-40">
                 {
                     filteredRestaurant.map(restaurant => 
                        <Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id}><RestaurantCard resData={restaurant} /> </Link> 
                     )
                 }
             </div>
-            <Footer />            
+            <Footer />        
         </div>
 
     );
