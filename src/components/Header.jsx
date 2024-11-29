@@ -7,6 +7,10 @@ const Header = () => {
   const navigate = useNavigate();
   const cartItems = useSelector((store) => store.cart.items);
   const userLog = useSelector((store) => store.user)
+  console.log(userLog);
+  // if(userLog){
+  //   setLoggedIn(true)
+  // }
 
   const handleLogoClick = () => {
     navigate("/");  // Navigate to the home page when the logo is clicked
@@ -23,12 +27,11 @@ const Header = () => {
             <Link to="/" className="link">Home</Link>
           </li>
           <li className="link px-6">
-            <Link to="/cart" className="link flex text-red-600
-            "> <img className="h-10 rounded-3xl hover:none" src="https://static.vecteezy.com/system/resources/previews/000/441/347/original/vector-shopping-cart-icon.jpg" alt="" /> ({cartItems.length})</Link>
+            <Link to="/cart" className="link flex text-green-900
+            "> <img className="h-10 rounded-3xl hover:none" src="https://raw.githubusercontent.com/ivanoff/react-native-ico-shopping/HEAD/static/shopping-cart.png" alt="" /> ({cartItems.length})</Link>
           </li>
           <li className="link px-6">
-            {/* <button className="hover:underline" onClick={handleLoginForm}>Login</button> */}
-            <Link to="/login" className="link">Login</Link>
+            <Link to="/login" className="link text-base flex"><img className="h-10 w-12 rounded-3xl" src="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png" alt="" /><span className="mt-2">Sign In</span></Link>
           </li>
         </ul>
       </div>
