@@ -6,7 +6,7 @@ import { clearCart, removeItem } from "../utils/cartSlice";
 
 const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems[0]?.card?.info);
+  // console.log(cartItems[0]?.card?.info);
 
   // remove selector
 
@@ -23,7 +23,7 @@ const Cart = () => {
 
     
     <div className="mx-10 my-10 p-4 text-center">
-        <button className="font-bold w-44 bg-black text-red-50 rounded-lg  px-5 active:scale-90" onClick={handleClearItem}>Clear Cart</button>
+        <button className="font-bold w-44 bg-black text-red-50 rounded-lg  px-5 active:scale-90" onClick={handleClearItem}>{cartItems.length===0? "" : "Clear Cart"}</button>
         <div className="flex flex-col w-1/2">
       {cartItems.length > 0 ? (
         cartItems.map((item) => (
@@ -42,7 +42,7 @@ const Cart = () => {
           
         ))
       ) : (
-        <h2 className="font-bold">OOPS!!  "Your cart is empty"</h2>
+        <h2 className="font-bold text-3xl  text-red-600">OOPS!!  "Your cart Looks like empty 🙂 , Please Select some items"</h2>
 
       )}
     </div>
