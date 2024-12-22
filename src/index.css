@@ -36,7 +36,7 @@ code {
 }
 .link:hover{
   text-decoration: underline;
-  scale: 0.9;
+  /* scale: 0.9; */
   color: red;
 }
 
@@ -66,9 +66,9 @@ code {
   scale: 0.9;
 }
 .search-btn input{
-  /* border: 1px solid; */
+  border: 1px solid;
   border-radius: 10px;
-  background-color: lightblue;
+  background-color: whitesmoke;
   margin: 5px 0px;
   padding: 5px 10px;
   font-size: 18px;
