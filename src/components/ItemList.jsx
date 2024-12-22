@@ -4,6 +4,8 @@ import { addItems } from "../utils/cartSlice";
 
 const ItemList = ({ items }) => {  // Destructure items from props
     const dispatch = useDispatch()
+    // console.log(items);
+    
 
     const handleAddItem = (item) => {
         // Dispatch an item
